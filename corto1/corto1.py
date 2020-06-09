@@ -12,11 +12,12 @@ def inicio():
         sucesion.append(1)                      #como el ciclo no entra al ser i = 1, le agrego el 1, se que no es lo mas eficiente
                                                 #pero si lo primero que funcionó
         sucesiones.append(sucesion)             #agrego la n-esima sucesion a una sola lista
-    with open("collatz.txt", "w") as f:
-        for secuencia in sucesiones:
+    with open("collatz.txt", "w") as f:         #abro archivo collatz, sino existe lo crea
+        for secuencia in sucesiones:            #para cada sucesion la agrego al archivo
             f.write(str(secuencia) + "\n")
 
          
 
-if __name__ == "__main__":
-    inicio()
+if __name__ == "__main__":                      #no lo comprendo bien pero entiendo que python
+    inicio()                                    #busca el archivo __main__ y es justo el __name__
+                                                #de este archivo
